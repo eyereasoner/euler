@@ -9,7 +9,7 @@
 'urn:example:Individual'('urn:example:Pat').
 
 % if X is an individual then X can do A or B
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     (
         'urn:example:Individual'(A)
     ),
@@ -19,7 +19,7 @@
     ]
 ).
 % if X is an individual who can do A then X can do E or D
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     (
         'urn:example:Individual'(A),
         'urn:example:canDo'(A,'urn:example:A')
@@ -30,7 +30,7 @@
     ]
 ).
 % if X is an individual who can do D then X can do E or F
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     (
         'urn:example:Individual'(A),
         'urn:example:canDo'(A,'urn:example:D')
@@ -46,11 +46,11 @@
     A,
     !.
 'https://eyereasoner.github.io/see#findModel'(A,[B,C,D]) :-
-    'https://eyereasoner.github.io/see#sequent'(E,F),
+    'http://www.w3.org/2000/10/swap/log#sequent'(E,F),
     member(G,F),
     E,
-    \+member('https://eyereasoner.github.io/see#sequent'(E,F),B),
-    append(B,['https://eyereasoner.github.io/see#sequent'(E,F)],H),
+    \+member('http://www.w3.org/2000/10/swap/log#sequent'(E,F),B),
+    append(B,['http://www.w3.org/2000/10/swap/log#sequent'(E,F)],H),
     append(C,[G],I),
     becomes(true,G),
     call_cleanup(

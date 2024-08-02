@@ -5,14 +5,14 @@
 :- use_module(library(terms)).
 
 :- dynamic(brake/0).
-:- dynamic('https://eyereasoner.github.io/see#sequent'/2).
+:- dynamic('http://www.w3.org/2000/10/swap/log#sequent'/2).
 :- dynamic('urn:example:is'/2).
 
 % beetle is a car
 'urn:example:Car'('urn:example:beetle').
 
 % all cars are green or blue
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     'urn:example:Car'(A),
     [
         'urn:example:is'(A,'urn:example:green'),
@@ -21,7 +21,7 @@
 ).
 
 % green things are beautiful
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     'urn:example:is'(A,'urn:example:green'),
     [
         'urn:example:is'(A,'urn:example:beautiful')
@@ -29,7 +29,7 @@
 ).
 
 % blue things are beautiful
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     'urn:example:is'(A,'urn:example:blue'),
     [
         'urn:example:is'(A,'urn:example:beautiful')
@@ -37,37 +37,37 @@
 ).
 
 % resolution
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     (
-        'https://eyereasoner.github.io/see#sequent'(A,B),
+        'http://www.w3.org/2000/10/swap/log#sequent'(A,B),
         select(C,B,D),
-        'https://eyereasoner.github.io/see#sequent'(C,E),
+        'http://www.w3.org/2000/10/swap/log#sequent'(C,E),
         length(E,F),
         F =< 1,
         append(E,D,G)
     ),
     [
-        'https://eyereasoner.github.io/see#sequent'(A,G)
+        'http://www.w3.org/2000/10/swap/log#sequent'(A,G)
     ]
 ).
 
 % factoring
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     (
-        'https://eyereasoner.github.io/see#sequent'(A,B),
+        'http://www.w3.org/2000/10/swap/log#sequent'(A,B),
         list_to_set(B,C)
     ),
     [
-        'https://eyereasoner.github.io/see#sequent'(A,C)
+        'http://www.w3.org/2000/10/swap/log#sequent'(A,C)
     ]
 ).
 
 % sequent
 sequent :-
-    (   'https://eyereasoner.github.io/see#sequent'(A,Bs),
+    (   'http://www.w3.org/2000/10/swap/log#sequent'(A,Bs),
         A,
         (   Bs = []
-        ->  write(fuse('https://eyereasoner.github.io/see#sequent'(A,Bs),A)),
+        ->  write(fuse('http://www.w3.org/2000/10/swap/log#sequent'(A,Bs),A)),
             nl,
             halt(2)
         ;   true

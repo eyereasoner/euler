@@ -5,14 +5,14 @@
 :- use_module(library(terms)).
 
 :- dynamic(brake/0).
-:- dynamic('https://eyereasoner.github.io/see#sequent'/2).
+:- dynamic('http://www.w3.org/2000/10/swap/log#sequent'/2).
 :- dynamic('urn:example:is'/2).
 
 % beetle is a car
 'urn:example:Car'('urn:example:beetle').
 
 % all cars are green or blue
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     'urn:example:Car'(A),
     [
         'urn:example:is'(A,'urn:example:green'),
@@ -21,7 +21,7 @@
 ).
 
 % green things are nice or pretty
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     'urn:example:is'(A,'urn:example:green'),
     [
         'urn:example:is'(A,'urn:example:nice'),
@@ -30,7 +30,7 @@
 ).
 
 % pretty things are pretty1 or pretty2
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     'urn:example:is'(A,'urn:example:pretty'),
     [
         'urn:example:is'(A,'urn:example:pretty1'),
@@ -39,7 +39,7 @@
 ).
 
 % nice things are nice1 or nice2
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     'urn:example:is'(A,'urn:example:nice'),
     [
         'urn:example:is'(A,'urn:example:nice1'),
@@ -48,7 +48,7 @@
 ).
 
 % pretty1 things are pretty11 or pretty12
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     'urn:example:is'(A,'urn:example:pretty1'),
     [
         'urn:example:is'(A,'urn:example:pretty11'),
@@ -57,7 +57,7 @@
 ).
 
 % pretty2 things are pretty21 or pretty22
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     'urn:example:is'(A,'urn:example:pretty2'),
     [
         'urn:example:is'(A,'urn:example:pretty21'),
@@ -66,7 +66,7 @@
 ).
 
 % nice1 things are nice11 or nice12
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     'urn:example:is'(A,'urn:example:nice1'),
     [
         'urn:example:is'(A,'urn:example:nice11'),
@@ -75,7 +75,7 @@
 ).
 
 % nice2 things are nice21 or nice22
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     'urn:example:is'(A,'urn:example:nice2'),
     [
         'urn:example:is'(A,'urn:example:nice21'),
@@ -84,70 +84,70 @@
 ).
 
 % pretty or nice or blue things are beautiful
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     'urn:example:is'(A,'urn:example:pretty11'),
     [
         'urn:example:is'(A,'urn:example:beautiful')
     ]
 ).
 
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     'urn:example:is'(A,'urn:example:pretty12'),
     [
         'urn:example:is'(A,'urn:example:beautiful')
     ]
 ).
 
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     'urn:example:is'(A,'urn:example:pretty21'),
     [
         'urn:example:is'(A,'urn:example:beautiful')
     ]
 ).
 
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     'urn:example:is'(A,'urn:example:pretty22'),
     [
         'urn:example:is'(A,'urn:example:beautiful')
     ]
 ).
 
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     'urn:example:is'(A,'urn:example:nice11'),
     [
         'urn:example:is'(A,'urn:example:beautiful')
     ]
 ).
 
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     'urn:example:is'(A,'urn:example:nice12'),
     [
         'urn:example:is'(A,'urn:example:beautiful')
     ]
 ).
 
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     'urn:example:is'(A,'urn:example:nice21'),
     [
         'urn:example:is'(A,'urn:example:beautiful')
     ]
 ).
 
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     'urn:example:is'(A,'urn:example:nice22'),
     [
         'urn:example:is'(A,'urn:example:beautiful')
     ]
 ).
 
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     'urn:example:is'(A,'urn:example:blue'),
     [
         'urn:example:is'(A,'urn:example:beautiful')
     ]
 ).
 
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     'urn:example:is'('urn:example:beetle','urn:example:beautiful'),
     [
         'urn:example:is'('urn:example:test',true)
@@ -155,37 +155,37 @@
 ).
 
 % resolution
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     (
-        'https://eyereasoner.github.io/see#sequent'(A,B),
+        'http://www.w3.org/2000/10/swap/log#sequent'(A,B),
         select(C,B,D),
-        'https://eyereasoner.github.io/see#sequent'(C,E),
+        'http://www.w3.org/2000/10/swap/log#sequent'(C,E),
         length(E,F),
         F =< 1,
         append(E,D,G)
     ),
     [
-        'https://eyereasoner.github.io/see#sequent'(A,G)
+        'http://www.w3.org/2000/10/swap/log#sequent'(A,G)
     ]
 ).
 
 % factoring
-'https://eyereasoner.github.io/see#sequent'(
+'http://www.w3.org/2000/10/swap/log#sequent'(
     (
-        'https://eyereasoner.github.io/see#sequent'(A,B),
+        'http://www.w3.org/2000/10/swap/log#sequent'(A,B),
         list_to_set(B,C)
     ),
     [
-        'https://eyereasoner.github.io/see#sequent'(A,C)
+        'http://www.w3.org/2000/10/swap/log#sequent'(A,C)
     ]
 ).
 
 % sequent
 sequent :-
-    (   'https://eyereasoner.github.io/see#sequent'(A,Bs),
+    (   'http://www.w3.org/2000/10/swap/log#sequent'(A,Bs),
         A,
         (   Bs = []
-        ->  write(fuse('https://eyereasoner.github.io/see#sequent'(A,Bs),A)),
+        ->  write(fuse('http://www.w3.org/2000/10/swap/log#sequent'(A,Bs),A)),
             nl,
             halt(2)
         ;   true
