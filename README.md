@@ -2,7 +2,7 @@
 
 - Looking at the [eye/reasoning](https://github.com/eyereasoner/eye/tree/see/reasoning) cases from a [standard prolog](https://www.scryer.pl/) perspective
 - Web logic dialoguing called __welding__ via `'your_iri'/n` predicates
-- Using [sequents](https://github.com/eyereasoner/see/blob/main/cases/beetle6.pl) to increase expressivity towards  First Order Logic
+- Using [sequents](https://github.com/eyereasoner/see/blob/main/cases/beetle6.pl) to increase expressivity to First Order Logic
 
 ## Install [trealla](https://github.com/trealla-prolog/trealla#building) and run
 ```
