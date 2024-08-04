@@ -3,11 +3,11 @@
 - Looking at the [eye/reasoning](https://github.com/eyereasoner/eye/tree/see/reasoning) cases from a [standard prolog](https://www.scryer.pl/) perspective
 - Web logic dialoguing called __welding__ via `'your_iri'/n` predicates
 
-## Install [trealla](https://github.com/trealla-prolog/trealla#building) and run
+## Install and test
+
 ```
-./test tpl
+git clone https://github.com/eyereasoner/see
+cd see/cases
+./test prolog
 ```
-## Install [scryer](https://github.com/mthom/scryer-prolog#installing-scryer-prolog) and run
-```
-./test scryer-prolog
-```
+`prolog` can be either [tpl](https://github.com/trealla-prolog/trealla#building) [scryer-scryer](https://github.com/mthom/scryer-prolog#installing-scryer-prolog).

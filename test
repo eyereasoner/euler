@@ -1,4 +1,0 @@
-#!/bin/bash
-pushd ./cases > /dev/null
-./test "$@"
-popd > /dev/null
