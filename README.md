@@ -10,4 +10,4 @@ git clone https://github.com/eyereasoner/see
 cd see/cases
 ./test prolog
 ```
-`prolog` can be either [tpl](https://github.com/trealla-prolog/trealla#building) [scryer-scryer](https://github.com/mthom/scryer-prolog#installing-scryer-prolog).
+`prolog` can be either [tpl](https://github.com/trealla-prolog/trealla#building) or [scryer-scryer](https://github.com/mthom/scryer-prolog#installing-scryer-prolog).
