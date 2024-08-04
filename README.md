@@ -1,7 +1,7 @@
 # Second Eye of Euler - SEE
 
 - Looking at the [eye/reasoning](https://github.com/eyereasoner/eye/tree/see/reasoning) cases from a [standard prolog](https://www.scryer.pl/) perspective
-- Web logic dialoguing called __welding__ via `'your_iri'/n` predicates
+- Web linking and dialoguing called __welding__ via `'your_iri'/n` predicates
 
 ## Install and test
 
