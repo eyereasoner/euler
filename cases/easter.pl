@@ -2,7 +2,7 @@
 
 :- use_module(library(between)).
 
-'https://eyereasoner.github.io/see#easter'(Year,Month,Day) :-
+'https://eyereasoner.github.io/see#easter'(Year, Month, Day) :-
     A is Year rem 19,
     B is Year//100,
     C is Year rem 100,
@@ -13,13 +13,13 @@
     Day is F rem 31+1.
 
 % query
-query('https://eyereasoner.github.io/see#easter'(Year,_Month,_Day)) :-
-    between(2021,2050,Year).
+query('https://eyereasoner.github.io/see#easter'(Year, _Month, _Day)) :-
+    between(2021, 2050, Year).
 
 test :-
     query(Q),
     Q,
-    write_term(Q,[numbervars(true),quoted(true),double_quotes(true)]),
+    write_term(Q, [numbervars(true), quoted(true), double_quotes(true)]),
     write('.\n'),
     fail;
     halt.

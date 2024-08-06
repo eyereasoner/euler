@@ -30010,7 +30010,7 @@ query('urn:example:N10000'('urn:example:i0')).
 test :-
     query(Q),
     Q,
-    write_term(Q,[numbervars(true),quoted(true),double_quotes(true)]),
+    write_term(Q, [numbervars(true), quoted(true), double_quotes(true)]),
     write('.\n'),
     fail;
     halt.

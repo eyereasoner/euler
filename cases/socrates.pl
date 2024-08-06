@@ -11,7 +11,7 @@ query('urn:example:Mortal'(_IND)).
 test :-
     query(Q),
     Q,
-    write_term(Q,[numbervars(true),quoted(true),double_quotes(true)]),
+    write_term(Q, [numbervars(true), quoted(true), double_quotes(true)]),
     write('.\n'),
     fail;
     halt.

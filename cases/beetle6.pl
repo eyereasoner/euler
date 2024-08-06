@@ -15,33 +15,33 @@
 'http://www.w3.org/2000/10/swap/log#sequent'(
     'urn:example:Car'(A),
     [
-        'urn:example:is'(A,'urn:example:green'),
-        'urn:example:is'(A,'urn:example:blue')
+        'urn:example:is'(A, 'urn:example:green'),
+        'urn:example:is'(A, 'urn:example:blue')
     ]
 ).
 
 % green things are nice or pretty
 'http://www.w3.org/2000/10/swap/log#sequent'(
-    'urn:example:is'(A,'urn:example:green'),
+    'urn:example:is'(A, 'urn:example:green'),
     [
-        'urn:example:is'(A,'urn:example:nice'),
-        'urn:example:is'(A,'urn:example:pretty')
+        'urn:example:is'(A, 'urn:example:nice'),
+        'urn:example:is'(A, 'urn:example:pretty')
     ]
 ).
 
 % pretty things are beautiful
 'http://www.w3.org/2000/10/swap/log#sequent'(
-    'urn:example:is'(A,'urn:example:pretty'),
+    'urn:example:is'(A, 'urn:example:pretty'),
     [
-        'urn:example:is'(A,'urn:example:beautiful')
+        'urn:example:is'(A, 'urn:example:beautiful')
     ]
 ).
 
 % blue things are beautiful
 'http://www.w3.org/2000/10/swap/log#sequent'(
-    'urn:example:is'(A,'urn:example:blue'),
+    'urn:example:is'(A, 'urn:example:blue'),
     [
-        'urn:example:is'(A,'urn:example:beautiful')
+        'urn:example:is'(A, 'urn:example:beautiful')
     ]
 ).
 
@@ -50,7 +50,7 @@
     'urn:example:Car'(A),
     [
         'http://www.w3.org/2000/10/swap/log#sequent'(
-           'urn:example:is'(A,'urn:example:beautiful'),
+           'urn:example:is'(A, 'urn:example:beautiful'),
            []
         )
     ]
@@ -59,35 +59,35 @@
 % resolution
 'http://www.w3.org/2000/10/swap/log#sequent'(
     (
-        'http://www.w3.org/2000/10/swap/log#sequent'(A,B),
-        select(C,B,D),
-        'http://www.w3.org/2000/10/swap/log#sequent'(C,E),
-        length(E,F),
+        'http://www.w3.org/2000/10/swap/log#sequent'(A, B),
+        select(C, B, D),
+        'http://www.w3.org/2000/10/swap/log#sequent'(C, E),
+        length(E, F),
         F =< 1,
-        append(E,D,G)
+        append(E, D, G)
     ),
     [
-        'http://www.w3.org/2000/10/swap/log#sequent'(A,G)
+        'http://www.w3.org/2000/10/swap/log#sequent'(A, G)
     ]
 ).
 
 % factoring
 'http://www.w3.org/2000/10/swap/log#sequent'(
     (
-        'http://www.w3.org/2000/10/swap/log#sequent'(A,B),
-        list_to_set(B,C)
+        'http://www.w3.org/2000/10/swap/log#sequent'(A, B),
+        list_to_set(B, C)
     ),
     [
-        'http://www.w3.org/2000/10/swap/log#sequent'(A,C)
+        'http://www.w3.org/2000/10/swap/log#sequent'(A, C)
     ]
 ).
 
 % sequent
 sequent :-
-    (   'http://www.w3.org/2000/10/swap/log#sequent'(A,Bs),
+    (   'http://www.w3.org/2000/10/swap/log#sequent'(A, Bs),
         A,
         (   Bs = []
-        ->  write(fuse('http://www.w3.org/2000/10/swap/log#sequent'(A,Bs),A)),
+        ->  write(fuse('http://www.w3.org/2000/10/swap/log#sequent'(A, Bs), A)),
             nl,
             halt(2)
         ;   true
@@ -103,7 +103,7 @@ sequent :-
         sequent
     ).
 
-step((A,B)) :-
+step((A, B)) :-
     !,
     step(A),
     step(B).
@@ -114,13 +114,13 @@ step(A) :-
     ).
 
 % query
-query('urn:example:is'(_A,_B)).
+query('urn:example:is'(_A, _B)).
 
 test :-
     sequent,
     query(Q),
     Q,
-    write_term(Q,[numbervars(true),quoted(true),double_quotes(true)]),
+    write_term(Q, [numbervars(true), quoted(true), double_quotes(true)]),
     write('.\n'),
     fail;
     halt.
