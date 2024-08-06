@@ -1,4 +1,4 @@
-% Showing proofs
+% Showing a proof for peano factorial calculation
 % based on https://www.metalevel.at/acomip/
 
 :- op(750, xfy, =>).
