@@ -3,9 +3,6 @@
 
 :- op(750, xfy, =>).
 
-mi_clause(natnum(0), true).
-mi_clause(natnum(s(X)), g(natnum(X))).
-
 mi_clause(factorial(0, s(0)), true).
 mi_clause(factorial(s(N), F), (g(factorial(N, F1)), g(product(s(N), F1, F)))).
 
