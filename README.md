@@ -1,13 +1,13 @@
-# Second Eye of Euler - SEE
+# Euler
 
-- Looking at the [eye/reasoning](https://github.com/eyereasoner/eye/tree/see/reasoning) cases from a [standard prolog](https://www.scryer.pl/) perspective
-- Web linking and drawing called __welding__ via `'any_iri'/n` predicates
+- Looking at the eye and lingua reasoning cases from a [standard prolog](https://www.scryer.pl/) perspective
+- Webizing via `'any_iri'/n` predicates
 
 ## Install and test
 
 ```
-git clone https://github.com/eyereasoner/see
-cd see/cases
+git clone https://github.com/eyereasoner/euler
+cd euler/cases
 ./test prolog
 ```
 `prolog` can be either [tpl](https://github.com/trealla-prolog/trealla#building) or [scryer-prolog](https://github.com/mthom/scryer-prolog#installing-scryer-prolog).
