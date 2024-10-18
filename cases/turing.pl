@@ -4,10 +4,10 @@
 
 % interpreter for Univeral Turing Machine
 
-'https://eyereasoner.github.io/see#compute'([], OutTape) :-
+'https://eyereasoner.github.io/euler#compute'([], OutTape) :-
     start(_MACHINE, I),
     find(I, [], "#", [], OutTape).
-'https://eyereasoner.github.io/see#compute'([Head|Tail], OutTape) :-
+'https://eyereasoner.github.io/euler#compute'([Head|Tail], OutTape) :-
     start(_MACHINE, I),
     find(I, [], Head, Tail, OutTape).
 
@@ -45,10 +45,10 @@ t([1, 1, 0, l], 1).
 t([1, "#", 1, s], halt).
 
 % query
-query('https://eyereasoner.github.io/see#compute'([1, 0, 1, 0, 0, 1], _ANSWER)).
-query('https://eyereasoner.github.io/see#compute'([1, 0, 1, 1, 1, 1], _ANSWER)).
-query('https://eyereasoner.github.io/see#compute'([1, 1, 1, 1, 1, 1], _ANSWER)).
-query('https://eyereasoner.github.io/see#compute'([], _ANSWER)).
+query('https://eyereasoner.github.io/euler#compute'([1, 0, 1, 0, 0, 1], _ANSWER)).
+query('https://eyereasoner.github.io/euler#compute'([1, 0, 1, 1, 1, 1], _ANSWER)).
+query('https://eyereasoner.github.io/euler#compute'([1, 1, 1, 1, 1, 1], _ANSWER)).
+query('https://eyereasoner.github.io/euler#compute'([], _ANSWER)).
 
 test :-
     query(Q),

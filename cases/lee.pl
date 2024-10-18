@@ -3,7 +3,7 @@
 
 :- use_module(library(lists)).
 
-'https://eyereasoner.github.io/see#route'(Source, Destination, Obstacles, Path) :-
+'https://eyereasoner.github.io/euler#route'(Source, Destination, Obstacles, Path) :-
     waves(Destination, [[Source], []], Obstacles, Waves),
     path(Source, Destination, Waves, Path).
 
@@ -67,7 +67,7 @@ path(A, B, [Wave|Waves], [B|Path]) :-
     path(A, B1, Waves, Path).
 
 % query
-query('https://eyereasoner.github.io/see#route'([1, 1], [9, 8], [[[2, 3], [4, 5]], [[6, 6], [8, 8]]], _ANSWER)).
+query('https://eyereasoner.github.io/euler#route'([1, 1], [9, 8], [[[2, 3], [4, 5]], [[6, 6], [8, 8]]], _ANSWER)).
 
 test :-
     query(Q),

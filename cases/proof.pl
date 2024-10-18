@@ -14,16 +14,16 @@ mi_clause(sum(0, M, M), true).
 mi_clause(sum(s(N), M, s(K)), g(sum(N, M, K))).
 
 % proof tree
-'https://eyereasoner.github.io/see#mi_tree'(true, true).
-'https://eyereasoner.github.io/see#mi_tree'((A, B), (TA, TB)) :-
-    'https://eyereasoner.github.io/see#mi_tree'(A, TA),
-    'https://eyereasoner.github.io/see#mi_tree'(B, TB).
-'https://eyereasoner.github.io/see#mi_tree'(g(G), TBody => G) :-
+'https://eyereasoner.github.io/euler#mi_tree'(true, true).
+'https://eyereasoner.github.io/euler#mi_tree'((A, B), (TA, TB)) :-
+    'https://eyereasoner.github.io/euler#mi_tree'(A, TA),
+    'https://eyereasoner.github.io/euler#mi_tree'(B, TB).
+'https://eyereasoner.github.io/euler#mi_tree'(g(G), TBody => G) :-
     mi_clause(G, Body),
-    'https://eyereasoner.github.io/see#mi_tree'(Body, TBody).
+    'https://eyereasoner.github.io/euler#mi_tree'(Body, TBody).
 
 % query
-query('https://eyereasoner.github.io/see#mi_tree'(g(factorial(s(s(s(s(0)))), _X)), _Y)).
+query('https://eyereasoner.github.io/euler#mi_tree'(g(factorial(s(s(s(s(0)))), _X)), _Y)).
 
 test :-
     query(Q),

@@ -4,15 +4,15 @@
 'http://www.w3.org/2000/01/rdf-schema#Resource'(_).
 
 % Everybody loves somebody who is lonely
-'urn:example:loves'(A, skolem(A)).
-'urn:example:is'(skolem(_), 'urn:example:lonely').
+'https://eyereasoner.github.io/euler#loves'(A, skolem(A)).
+'https://eyereasoner.github.io/euler#is'(skolem(_), 'https://eyereasoner.github.io/euler#lonely').
 
 % query
-query('http://www.w3.org/2000/01/rdf-schema#Resource'('urn:example:Pat')).
+query('http://www.w3.org/2000/01/rdf-schema#Resource'('https://eyereasoner.github.io/euler#Pat')).
 query(
     (
-        'urn:example:loves'('urn:example:Bob', X),
-        'urn:example:is'(X, 'urn:example:lonely')
+        'https://eyereasoner.github.io/euler#loves'('https://eyereasoner.github.io/euler#Bob', X),
+        'https://eyereasoner.github.io/euler#is'(X, 'https://eyereasoner.github.io/euler#lonely')
     )
 ).
 

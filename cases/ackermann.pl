@@ -2,7 +2,7 @@
 % See https://en.wikipedia.org/wiki/Ackermann_function
 
 % ackermann(x, y, z)
-'https://eyereasoner.github.io/see#ackermann'(A, B, C) :-
+'https://eyereasoner.github.io/euler#ackermann'(A, B, C) :-
     D is B+3,
     ackermann(A, D, 2, E),
     C is E-3.
@@ -32,17 +32,17 @@ ackermann(A, B, C, D) :-
     ackermann(G, F, C, D).
 
 % query
-query('https://eyereasoner.github.io/see#ackermann'(0, 6, _ANSWER)).
-query('https://eyereasoner.github.io/see#ackermann'(1, 2, _ANSWER)).
-query('https://eyereasoner.github.io/see#ackermann'(1, 7, _ANSWER)).
-query('https://eyereasoner.github.io/see#ackermann'(2, 2, _ANSWER)).
-query('https://eyereasoner.github.io/see#ackermann'(2, 9, _ANSWER)).
-query('https://eyereasoner.github.io/see#ackermann'(3, 4, _ANSWER)).
-query('https://eyereasoner.github.io/see#ackermann'(3, 14, _ANSWER)).
-query('https://eyereasoner.github.io/see#ackermann'(4, 0, _ANSWER)).
-query('https://eyereasoner.github.io/see#ackermann'(4, 1, _ANSWER)).
-query('https://eyereasoner.github.io/see#ackermann'(4, 2, _ANSWER)).
-query('https://eyereasoner.github.io/see#ackermann'(5, 0, _ANSWER)).
+query('https://eyereasoner.github.io/euler#ackermann'(0, 6, _ANSWER)).
+query('https://eyereasoner.github.io/euler#ackermann'(1, 2, _ANSWER)).
+query('https://eyereasoner.github.io/euler#ackermann'(1, 7, _ANSWER)).
+query('https://eyereasoner.github.io/euler#ackermann'(2, 2, _ANSWER)).
+query('https://eyereasoner.github.io/euler#ackermann'(2, 9, _ANSWER)).
+query('https://eyereasoner.github.io/euler#ackermann'(3, 4, _ANSWER)).
+query('https://eyereasoner.github.io/euler#ackermann'(3, 14, _ANSWER)).
+query('https://eyereasoner.github.io/euler#ackermann'(4, 0, _ANSWER)).
+query('https://eyereasoner.github.io/euler#ackermann'(4, 1, _ANSWER)).
+query('https://eyereasoner.github.io/euler#ackermann'(4, 2, _ANSWER)).
+query('https://eyereasoner.github.io/euler#ackermann'(5, 0, _ANSWER)).
 
 test :-
     query(Q),

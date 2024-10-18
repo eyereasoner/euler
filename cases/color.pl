@@ -2,7 +2,7 @@
 
 :- use_module(library(lists)).
 
-'https://eyereasoner.github.io/see#color'(_Map, Places) :-
+'https://eyereasoner.github.io/euler#color'(_Map, Places) :-
     findall([Place, _], neighbours(Place, _), Places),
     places(Places).
 
@@ -45,7 +45,7 @@ neighbours(sweden, [finland, denmark]).
 neighbours(united_kingdom, [ireland, netherlands, belgium, france]).
 
 % query
-query('https://eyereasoner.github.io/see#color'(map1, _ANSWER)).
+query('https://eyereasoner.github.io/euler#color'(map1, _ANSWER)).
 
 test :-
     query(Q),

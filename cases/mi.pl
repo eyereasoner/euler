@@ -1,13 +1,13 @@
 % Meta-interpretation
 % Original code from https://www.youtube.com/watch?v=nmBkU-l1zyc&t=1870s
 
-'https://eyereasoner.github.io/see#mi'([]).
-'https://eyereasoner.github.io/see#mi'([G|Gs]) :-
+'https://eyereasoner.github.io/euler#mi'([]).
+'https://eyereasoner.github.io/euler#mi'([G|Gs]) :-
     head_body_(G, Goals, Gs),
-    'https://eyereasoner.github.io/see#mi'(Goals).
+    'https://eyereasoner.github.io/euler#mi'(Goals).
 
-head_body_('https://eyereasoner.github.io/see#mi'([]), Rs, Rs).
-head_body_('https://eyereasoner.github.io/see#mi'([G|Gs]), [head_body_(G, Goals, Gs), 'https://eyereasoner.github.io/see#mi'(Goals)|Rs], Rs).
+head_body_('https://eyereasoner.github.io/euler#mi'([]), Rs, Rs).
+head_body_('https://eyereasoner.github.io/euler#mi'([G|Gs]), [head_body_(G, Goals, Gs), 'https://eyereasoner.github.io/euler#mi'(Goals)|Rs], Rs).
 
 head_body_(head_body_(Head, Goals0, Goals), Rs, Rs) :-
     head_body_(Head, Goals0, Goals).
@@ -22,7 +22,7 @@ head_body_(sum(0, M, M), Rs, Rs).
 head_body_(sum(s(N), M, s(K)), [sum(N, M, K)|Rs], Rs).
 
 % query
-query('https://eyereasoner.github.io/see#mi'(['https://eyereasoner.github.io/see#mi'(['https://eyereasoner.github.io/see#mi'(['https://eyereasoner.github.io/see#mi'(['https://eyereasoner.github.io/see#mi'([factorial(s(s(s(s(s(s(0)))))), _X)])])])])])).
+query('https://eyereasoner.github.io/euler#mi'(['https://eyereasoner.github.io/euler#mi'(['https://eyereasoner.github.io/euler#mi'(['https://eyereasoner.github.io/euler#mi'(['https://eyereasoner.github.io/euler#mi'([factorial(s(s(s(s(s(s(0)))))), _X)])])])])])).
 
 test :-
     query(Q),

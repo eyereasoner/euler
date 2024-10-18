@@ -1,1 +1,1 @@
-'urn:example:N10000'('urn:example:i0').
+'https://eyereasoner.github.io/euler#N10000'('https://eyereasoner.github.io/euler#i0').

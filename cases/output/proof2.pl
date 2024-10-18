@@ -1,1 +1,1 @@
-'https://eyereasoner.github.io/see#mi_tree'(g('urn:example:Mortal'('urn:example:Socrates')),(true=>'urn:example:Man'('urn:example:Socrates'))=>'urn:example:Mortal'('urn:example:Socrates')).
+'https://eyereasoner.github.io/euler#mi_tree'(g('https://eyereasoner.github.io/euler#Mortal'('https://eyereasoner.github.io/euler#Socrates')),(true=>'https://eyereasoner.github.io/euler#Man'('https://eyereasoner.github.io/euler#Socrates'))=>'https://eyereasoner.github.io/euler#Mortal'('https://eyereasoner.github.io/euler#Socrates')).

@@ -1,10 +1,10 @@
 % Gray Code Counter
 % Code from the book "Clause and Effect" Chapter 8
 
-'https://eyereasoner.github.io/see#gcc'([], _, []).
-'https://eyereasoner.github.io/see#gcc'([C|Cs], S, [N|Ns]) :-
+'https://eyereasoner.github.io/euler#gcc'([], _, []).
+'https://eyereasoner.github.io/euler#gcc'([C|Cs], S, [N|Ns]) :-
     gcc(C, S, N),
-    'https://eyereasoner.github.io/see#gcc'(Cs, N, Ns).
+    'https://eyereasoner.github.io/euler#gcc'(Cs, N, Ns).
 
 gcc(C, [Qa, Qb, Qc], [Za, Zb, Zc]) :-
     neta(Qa, Qb, D1),
@@ -46,7 +46,7 @@ inv(0, 1).
 inv(1, 0).
 
 % query
-query('https://eyereasoner.github.io/see#gcc'([1, 1, 1, 1, 1, 1, 1, 1, 1], [0, 0, 0], _ANSWER)).
+query('https://eyereasoner.github.io/euler#gcc'([1, 1, 1, 1, 1, 1, 1, 1, 1], [0, 0, 0], _ANSWER)).
 
 test :-
     query(Q),

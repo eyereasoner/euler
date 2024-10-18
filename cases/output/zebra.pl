@@ -1,1 +1,1 @@
-'https://eyereasoner.github.io/see#zebra'(norwegian,japanese).
+'https://eyereasoner.github.io/euler#zebra'(norwegian,japanese).

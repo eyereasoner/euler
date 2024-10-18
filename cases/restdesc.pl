@@ -30,7 +30,7 @@
 'http://example.org/restaurant#isOn'('http://example.org/vocab#RestAppointment', "#myAppointments").
 
 % descriptions
-'https://eyereasoner.github.io/see#restdesc'(
+'https://eyereasoner.github.io/euler#restdesc'(
     (
         'http://www.w3.org/1999/02/22-rdf-syntax-ns#type'(A, 'http://xmlns.com/foaf/0.1/Person')
     ), (
@@ -43,7 +43,7 @@
     )
 ).
 
-'https://eyereasoner.github.io/see#restdesc'(
+'https://eyereasoner.github.io/euler#restdesc'(
     (
         'http://www.w3.org/1999/02/22-rdf-syntax-ns#type'(A, 'http://www.w3.org/2000/10/swap/pim/contact#Address')
     ), (
@@ -56,7 +56,7 @@
     )
 ).
 
-'https://eyereasoner.github.io/see#restdesc'(
+'https://eyereasoner.github.io/euler#restdesc'(
     (
         'http://www.w3.org/2003/01/geo/wgs84_pos#lat'(A, B),
         'http://www.w3.org/2003/01/geo/wgs84_pos#long'(A, C)
@@ -70,7 +70,7 @@
     )
 ).
 
-'https://eyereasoner.github.io/see#restdesc'(
+'https://eyereasoner.github.io/euler#restdesc'(
     (
         'http://www.w3.org/2003/01/geo/wgs84_pos#lat'(A, B),
         'http://www.w3.org/2003/01/geo/wgs84_pos#long'(A, C)
@@ -84,7 +84,7 @@
     )
 ).
 
-'https://eyereasoner.github.io/see#restdesc'(
+'https://eyereasoner.github.io/euler#restdesc'(
     (
         'http://www.w3.org/2003/01/geo/wgs84_pos#lat'(A, _),
         'http://www.w3.org/2003/01/geo/wgs84_pos#long'(A, _),
@@ -107,7 +107,7 @@
     )
 ).
 
-'https://eyereasoner.github.io/see#restdesc'(
+'https://eyereasoner.github.io/euler#restdesc'(
     (
         'http://example.org/restaurant#reservationList'(A, B),
         'http://example.org/restaurant#isOutside'(_, C),
@@ -127,7 +127,7 @@
 
 % composition
 compose :-
-    (   'https://eyereasoner.github.io/see#restdesc'(Pre, Post),
+    (   'https://eyereasoner.github.io/euler#restdesc'(Pre, Post),
         Pre,
         \+Post,
         label(Post),

@@ -3,44 +3,44 @@
 :- use_module(library(lists)).
 :- use_module(library(iso_ext)).
 
-'urn:example:policy'('urn:example:test1', 'urn:example:PolicyX').
-'urn:example:has'('urn:example:test1', 'urn:example:A').
-'urn:example:has'('urn:example:test1', 'urn:example:B').
-'urn:example:has'('urn:example:test1', 'urn:example:C').
-'urn:example:Policy'('urn:example:PolicyX').
-'urn:example:allOf'('urn:example:PolicyX', 'urn:example:A').
-'urn:example:allOf'('urn:example:PolicyX', 'urn:example:B').
-'urn:example:anyOf'('urn:example:PolicyX', 'urn:example:C').
-'urn:example:noneOf'('urn:example:PolicyX', 'urn:example:D').
+'https://eyereasoner.github.io/euler#policy'('https://eyereasoner.github.io/euler#test1', 'https://eyereasoner.github.io/euler#PolicyX').
+'https://eyereasoner.github.io/euler#has'('https://eyereasoner.github.io/euler#test1', 'https://eyereasoner.github.io/euler#A').
+'https://eyereasoner.github.io/euler#has'('https://eyereasoner.github.io/euler#test1', 'https://eyereasoner.github.io/euler#B').
+'https://eyereasoner.github.io/euler#has'('https://eyereasoner.github.io/euler#test1', 'https://eyereasoner.github.io/euler#C').
+'https://eyereasoner.github.io/euler#Policy'('https://eyereasoner.github.io/euler#PolicyX').
+'https://eyereasoner.github.io/euler#allOf'('https://eyereasoner.github.io/euler#PolicyX', 'https://eyereasoner.github.io/euler#A').
+'https://eyereasoner.github.io/euler#allOf'('https://eyereasoner.github.io/euler#PolicyX', 'https://eyereasoner.github.io/euler#B').
+'https://eyereasoner.github.io/euler#anyOf'('https://eyereasoner.github.io/euler#PolicyX', 'https://eyereasoner.github.io/euler#C').
+'https://eyereasoner.github.io/euler#noneOf'('https://eyereasoner.github.io/euler#PolicyX', 'https://eyereasoner.github.io/euler#D').
 
-'urn:example:pass'(A, 'urn:example:allOfTest') :-
-    'urn:example:policy'(B, A),
-    'urn:example:Policy'(A),
+'https://eyereasoner.github.io/euler#pass'(A, 'https://eyereasoner.github.io/euler#allOfTest') :-
+    'https://eyereasoner.github.io/euler#policy'(B, A),
+    'https://eyereasoner.github.io/euler#Policy'(A),
     forall(
-        'urn:example:allOf'(A, C),
-        'urn:example:has'(B, C)
+        'https://eyereasoner.github.io/euler#allOf'(A, C),
+        'https://eyereasoner.github.io/euler#has'(B, C)
     ).
 
-'urn:example:pass'(A, 'urn:example:anyOfTest') :-
-    'urn:example:policy'(B, A),
-    'urn:example:Policy'(A),
+'https://eyereasoner.github.io/euler#pass'(A, 'https://eyereasoner.github.io/euler#anyOfTest') :-
+    'https://eyereasoner.github.io/euler#policy'(B, A),
+    'https://eyereasoner.github.io/euler#Policy'(A),
     findall(C,
         (
-            'urn:example:anyOf'(A, C),
-            'urn:example:has'(B, C)
+            'https://eyereasoner.github.io/euler#anyOf'(A, C),
+            'https://eyereasoner.github.io/euler#has'(B, C)
         ),
         D
     ),
     length(D, E),
     E \= 0.
 
-'urn:example:pass'(A, 'urn:example:noneOfTest') :-
-    'urn:example:policy'(B, A),
-     'urn:example:Policy'(A),
+'https://eyereasoner.github.io/euler#pass'(A, 'https://eyereasoner.github.io/euler#noneOfTest') :-
+    'https://eyereasoner.github.io/euler#policy'(B, A),
+     'https://eyereasoner.github.io/euler#Policy'(A),
     findall(C,
         (
-            'urn:example:noneOf'(A, C),
-            'urn:example:has'(B, C)
+            'https://eyereasoner.github.io/euler#noneOf'(A, C),
+            'https://eyereasoner.github.io/euler#has'(B, C)
         ),
         D
     ),
@@ -49,10 +49,10 @@
 % query
 query(
     (
-        'urn:example:Policy'(_A),
-        'urn:example:pass'(_A, 'urn:example:allOfTest'),
-        'urn:example:pass'(_A, 'urn:example:anyOfTest'),
-        'urn:example:pass'(_A, 'urn:example:noneOfTest')
+        'https://eyereasoner.github.io/euler#Policy'(_A),
+        'https://eyereasoner.github.io/euler#pass'(_A, 'https://eyereasoner.github.io/euler#allOfTest'),
+        'https://eyereasoner.github.io/euler#pass'(_A, 'https://eyereasoner.github.io/euler#anyOfTest'),
+        'https://eyereasoner.github.io/euler#pass'(_A, 'https://eyereasoner.github.io/euler#noneOfTest')
     )
 ).
 

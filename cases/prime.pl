@@ -2,7 +2,7 @@
 
 :- use_module(library(between)).
 
-'https://eyereasoner.github.io/see#primerange'(A, B, L) :-
+'https://eyereasoner.github.io/euler#primerange'(A, B, L) :-
     findall(I, (between(A, B, I), prime(I)), L).
 
 prime(2).
@@ -32,7 +32,7 @@ factor(N, L) :-
 % for the argument N.
 %   (integer, integer) (+, ?)
 
-'https://eyereasoner.github.io/see#totient'(N, Phi) :-
+'https://eyereasoner.github.io/euler#totient'(N, Phi) :-
     prime_factors_mult(N, L),
     to_phi(L, Phi).
 
@@ -119,12 +119,12 @@ divi(N, F, M, R, K) :-
 divi(N, _, M, N, M).
 
 % query
-query('https://eyereasoner.github.io/see#primerange'(0, 100, _ANSWER)).
-query('https://eyereasoner.github.io/see#primerange'(1000000, 1000100, _ANSWER)).
-query('https://eyereasoner.github.io/see#totient'(271, _ANSWER)).
-query('https://eyereasoner.github.io/see#totient'(2718281, _ANSWER)).
-query('https://eyereasoner.github.io/see#totient'(27182818284, _ANSWER)).
-query('https://eyereasoner.github.io/see#totient'(271828182845904, _ANSWER)).
+query('https://eyereasoner.github.io/euler#primerange'(0, 100, _ANSWER)).
+query('https://eyereasoner.github.io/euler#primerange'(1000000, 1000100, _ANSWER)).
+query('https://eyereasoner.github.io/euler#totient'(271, _ANSWER)).
+query('https://eyereasoner.github.io/euler#totient'(2718281, _ANSWER)).
+query('https://eyereasoner.github.io/euler#totient'(27182818284, _ANSWER)).
+query('https://eyereasoner.github.io/euler#totient'(271828182845904, _ANSWER)).
 
 test :-
     query(Q),

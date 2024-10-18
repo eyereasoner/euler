@@ -19,7 +19,7 @@
 % exhibit an interference effect: an answer is produced from the junction if it
 % occurs in one or the other branch but not both.
 
-:- dynamic('https://eyereasoner.github.io/see#sdcoding'/2).
+:- dynamic('https://eyereasoner.github.io/euler#sdcoding'/2).
 
 % |R) = |0, 0) + |1, 1)
 r(false, false).
@@ -90,9 +90,9 @@ sdc(N, M) :-
     r(X, Y),
     alice(N, [X, B]),
     bob([B, Y], M),
-    (   'https://eyereasoner.github.io/see#sdcoding'(N, M)
-    ->  retract('https://eyereasoner.github.io/see#sdcoding'(N, M))
-    ;   assertz('https://eyereasoner.github.io/see#sdcoding'(N, M))
+    (   'https://eyereasoner.github.io/euler#sdcoding'(N, M)
+    ->  retract('https://eyereasoner.github.io/euler#sdcoding'(N, M))
+    ;   assertz('https://eyereasoner.github.io/euler#sdcoding'(N, M))
     ).
 
 % superdense coding appearing an odd number of times
@@ -102,7 +102,7 @@ reason :-
     true.
 
 % query
-query('https://eyereasoner.github.io/see#sdcoding'(_N, _M)).
+query('https://eyereasoner.github.io/euler#sdcoding'(_N, _M)).
 
 test :-
     reason,

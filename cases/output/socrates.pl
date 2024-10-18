@@ -1,1 +1,1 @@
-'urn:example:Mortal'('urn:example:Socrates').
+'https://eyereasoner.github.io/euler#Mortal'('https://eyereasoner.github.io/euler#Socrates').

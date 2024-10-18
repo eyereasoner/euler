@@ -1,12 +1,12 @@
 % Socrates is a mortal
 
-'urn:example:Man'('urn:example:Socrates').
+'https://eyereasoner.github.io/euler#Man'('https://eyereasoner.github.io/euler#Socrates').
 
-'urn:example:Mortal'(X) :-
-    'urn:example:Man'(X).
+'https://eyereasoner.github.io/euler#Mortal'(X) :-
+    'https://eyereasoner.github.io/euler#Man'(X).
 
 % query
-query('urn:example:Mortal'(_IND)).
+query('https://eyereasoner.github.io/euler#Mortal'(_IND)).
 
 test :-
     query(Q),
