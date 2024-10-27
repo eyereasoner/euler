@@ -1,4 +1,4 @@
-# Engineering Unifying Logic Explainable Reasoning - EULER
+# Engineering Unifying Logic and Explainable Reasoning - EULER
 
 ## Install and test
 
