@@ -41,7 +41,8 @@
     subtract([[0, 1], A], C),
     add([[0, 1], A], D),
     divide([C, D], E),
-    'https://eyereasoner.github.io/euler#log'([2.718281828459045, 0], E, F),
+    X is 0 + e,
+    'https://eyereasoner.github.io/euler#log'([X, 0], E, F),
     divide([F, [0, 2]], B).
 
 polar([A, B], [C, D]) :-
@@ -92,8 +93,8 @@ divide([A, B], C) :-
 
 % query
 query('https://eyereasoner.github.io/euler#exp'([-1, 0], [0.5, 0], _ANSWER)).
-query('https://eyereasoner.github.io/euler#exp'([2.718281828459045, 0], [0, pi], _ANSWER)).
-query('https://eyereasoner.github.io/euler#log'([2.718281828459045, 0], [-1, 0], _ANSWER)).
+query((X is 0+e, 'https://eyereasoner.github.io/euler#exp'([X, 0], [0, pi], _ANSWER))).
+query((X is 0+e, 'https://eyereasoner.github.io/euler#log'([X, 0], [-1, 0], _ANSWER))).
 query('https://eyereasoner.github.io/euler#log'([0, 1], [0, 1], _ANSWER)).
 query('https://eyereasoner.github.io/euler#sin'([1.570796326794897, 1.316957896924817], _ANSWER)).
 query('https://eyereasoner.github.io/euler#cos'([0, -1.316957896924817], _ANSWER)).
