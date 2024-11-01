@@ -1,0 +1,1 @@
+'https://eyereasoner.github.io/euler#is'('https://eyereasoner.github.io/.well-known/genid/995bae55-140a-4a1a-b68f-bc0153f79503#x','https://eyereasoner.github.io/euler#good'('https://eyereasoner.github.io/euler#Cobbler')).

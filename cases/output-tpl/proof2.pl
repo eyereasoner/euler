@@ -1,0 +1,1 @@
+'https://eyereasoner.github.io/euler#mi_tree'(g('https://eyereasoner.github.io/euler#Mortal'('https://eyereasoner.github.io/euler#Socrates')),(true=>'https://eyereasoner.github.io/euler#Man'('https://eyereasoner.github.io/euler#Socrates'))=>'https://eyereasoner.github.io/euler#Mortal'('https://eyereasoner.github.io/euler#Socrates')).
