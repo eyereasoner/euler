@@ -24,8 +24,8 @@
     'https://eyereasoner.github.io/euler#measurement10'('https://eyereasoner.github.io/euler#input1', B),
     'https://eyereasoner.github.io/euler#measurement2'('https://eyereasoner.github.io/euler#input2', true),
     'https://eyereasoner.github.io/euler#measurement3'('https://eyereasoner.github.io/euler#disturbance1', C),
-    D is B*19.6,             % proportial part
-    E is log(C)/log(10),     % compensation part
+    D is B*19.6,            % proportial part
+    E is log(C)/log(10),    % compensation part
     A is D-E.               % simple feedforward control
 
 'https://eyereasoner.github.io/euler#control1'('https://eyereasoner.github.io/euler#actuator2', A) :-
@@ -33,11 +33,11 @@
     'https://eyereasoner.github.io/euler#query3'('https://eyereasoner.github.io/euler#state3', B),
     'https://eyereasoner.github.io/euler#measurement4'('https://eyereasoner.github.io/euler#output2', C),
     'https://eyereasoner.github.io/euler#target2'('https://eyereasoner.github.io/euler#output2', D),
-    E is D-C,                % error
-    F is B-C,                % differential error
-    G is 5.8*E,              % proportial part
-    H is 7.3/E,              % nonlinear factor
-    I is H*F,                % nonlinear differential part
+    E is D-C,               % error
+    F is B-C,               % differential error
+    G is 5.8*E,             % proportial part
+    H is 7.3/E,             % nonlinear factor
+    I is H*F,               % nonlinear differential part
     A is G+I.               % PND feedback control
 
 'https://eyereasoner.github.io/euler#measurement10'(A, B) :-
