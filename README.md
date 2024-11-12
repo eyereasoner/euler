@@ -7,4 +7,4 @@ git clone https://github.com/eyereasoner/euler
 cd euler/cases
 ./test
 ```
-`prolog` can be either [tpl](https://github.com/trealla-prolog/trealla#building) or [scryer-prolog](https://github.com/mthom/scryer-prolog#installing-scryer-prolog).
+The first argument of test is either [tpl](https://github.com/trealla-prolog/trealla#building) (default) or [scryer-prolog](https://github.com/mthom/scryer-prolog#installing-scryer-prolog).
