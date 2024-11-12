@@ -1,5 +1,6 @@
 # euler
-### Looking at the eye reasoning cases from a standard prolog perspective
+
+Looking at the eye reasoning cases from a standard prolog perspective
 
 ## Install and test
 
