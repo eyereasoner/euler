@@ -1,4 +1,5 @@
-# Engineering Unifying Logic and Explainable Reasoning - EULER
+# euler
+### Looking at the eye reasoning cases from a standard prolog perspective
 
 ## Install and test
 
