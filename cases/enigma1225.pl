@@ -5,7 +5,7 @@
 
 'https://eyereasoner.github.io/euler#enigma1225'(Size, [Permutation, Board, Max]) :-
     setof(Total, M^Freq^Perm^square(Size, M, Total, Freq, Perm), Totals),
-    last(Totals, Max),
+    lastlist(Totals, Max),
     square(Size, Board, Max, _, Permutation).
 
 var_matrix(Size, M) :-
@@ -65,7 +65,7 @@ from_to(M, N, L) :-
     from_to_acc(M, [N], L),
     !.
 from_to(H, N, [H|T]) :-
-    last([H|T], N),
+    lastlist([H|T], N),
     !,
     H =< N.
 
@@ -199,6 +199,13 @@ flatlist_([Hd|Tl], Tail, List) :-
     flatlist_(Hd, FlatHeadTail, List),
     flatlist_(Tl, Tail, FlatHeadTail).
 flatlist_(NonList, Tl, [NonList|Tl]).
+
+lastlist([X|Xs], Last) :-
+    lastlist_(Xs, X, Last).
+
+lastlist_([], Last, Last).
+lastlist_([X|Xs], _, Last) :-
+    lastlist_(Xs, X, Last).
 
 % query
 query('https://eyereasoner.github.io/euler#enigma1225'(8, _ANSWER)).
