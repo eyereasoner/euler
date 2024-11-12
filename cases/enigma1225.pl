@@ -200,13 +200,6 @@ flatlist_([Hd|Tl], Tail, List) :-
     flatlist_(Tl, Tail, FlatHeadTail).
 flatlist_(NonList, Tl, [NonList|Tl]).
 
-last([X|Xs], Last) :-
-    last_(Xs, X, Last).
-
-last_([], Last, Last).
-last_([X|Xs], _, Last) :-
-    last_(Xs, X, Last).
-
 % query
 query('https://eyereasoner.github.io/euler#enigma1225'(8, _ANSWER)).
 
